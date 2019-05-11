@@ -1,0 +1,21 @@
+create/read mitmproxy rawdump and fuzz post requests
+
+python version > 3.6
+pip install mitmproxy
+
+traffic to file
+mitmdump -w rawdump.txt
+(mitmproxy -w rawdump.txt)
+... then surf
+
+fuzz post requests from raw mitmproxy dumpfile
+python fuzzor.py
+
+more information:
+mitmproxy.org
+https://www.owasp.org/index.php/Top_10-2017_A1-Injection
+https://www.owasp.org/index.php/OWASP_Testing_Guide_Appendix_C:_Fuzz_Vectors#Replacive_fuzzing
+
+https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)
+https://www.owasp.org/index.php/Testing_for_Command_Injection_(OTG-INPVAL-013)
+https://www.owasp.org/index.php/Testing_for_ORM_Injection_(OTG-INPVAL-007)

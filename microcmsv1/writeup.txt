@@ -1,0 +1,32 @@
+Micro-CMS v1
+
+Flag0:
+#0
+get request /page/n -> sequence for page numbers
+0_0_fuzz.py
+n = 7 request == forbidden 403
+
+#1
+get request /page/edit/n
+loads also content to edit
+GET http://35.196.135.216/0aebe18f12/page/edit/7
+0_1_req.py
+edit route has no guard for n = 7
+loads content for n = 7
+flag in response
+
+Flag1
+sqli in url for /page/edit get request
+/page/edit/1'
+flag in response
+
+Flag2
+xss in body for create page post request -> html injection
+flag in popup
+
+Flag3
+in edit page mode
+add a button with an onclick event and save the page
+inspect source, the button tag will have a flag as attribute
+-> html injection
+flag in sourcecode of button element

