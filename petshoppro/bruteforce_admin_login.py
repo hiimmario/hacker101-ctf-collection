@@ -1,8 +1,8 @@
 import requests
 
 # get usernames and passwords
-usernames = requests.get("https://raw.githubusercontent.com/danielmiessler/SecLists/master/Usernames/top-usernames-shortlist.txt").text.splitlines()
-passwords = requests.get("https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/500-worst-passwords.txt").text.splitlines()
+usernames = requests.get("https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/best1050.txt").text.splitlines()
+passwords = requests.get("https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000.txt").text.splitlines()
 
 un_len = len(usernames)
 pw_len = len(passwords)
